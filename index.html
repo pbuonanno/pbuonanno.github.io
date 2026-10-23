@@ -324,6 +324,34 @@ body{font-kerning:normal}
 
 /* Newly published book announcement */
 .book-news{padding:0 0 28px}.book-news-card{display:grid;grid-template-columns:170px 1fr auto;align-items:center;gap:25px;padding:25px 28px;background:#edf1ff;border-left:4px solid #4354e8;border-radius:5px}.book-news-kicker{font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#4354e8}.book-news-title{font-family:var(--display);font-weight:760;letter-spacing:-.045em;font-size:clamp(22px,2.3vw,30px);line-height:1.24;margin:4px 0 7px}.book-news-meta{font-size:12px;color:#53607b;margin:0}.book-news-cta{display:inline-block;padding:10px 12px;border:1px solid #98a5e2;border-radius:4px;font-size:12px;font-weight:750;white-space:nowrap;color:#243cba}.book-news-cta:hover{background:#4354e8;color:#fff;border-color:#4354e8}@media(max-width:760px){.book-news{padding:0 0 26px}.book-news-card{grid-template-columns:1fr;gap:9px;padding:23px 22px}.book-news-title{font-size:23px}.book-news-meta{font-size:13px;line-height:1.55}.book-news-cta{justify-self:start;margin-top:8px}}
+
+/* Book cover within the new publication announcement. Mobile layout otherwise unchanged. */
+.book-news .book-news-card{grid-template-columns:126px minmax(0,1fr);gap:25px;align-items:center}
+.book-news-cover{display:block;width:126px;align-self:center}
+.book-news-cover img{display:block;width:126px;height:180px;object-fit:contain;border-radius:3px;background:#fff;box-shadow:0 10px 18px rgba(25,37,74,.12)}
+.book-news-details{min-width:0}
+.book-news-kicker{margin-bottom:9px}
+.book-news-kicker span{margin-left:15px;color:#637096}
+.book-news-meta{margin-bottom:13px;line-height:1.65}
+.book-news-details .book-news-cta{display:inline-flex;align-items:center}
+.book-news-card.no-cover{grid-template-columns:minmax(0,1fr)}
+.book-news-card.no-cover .book-news-cover{display:none}
+@media(max-width:760px){
+.book-news .book-news-card{grid-template-columns:98px minmax(0,1fr);gap:17px;align-items:start;padding:20px}
+.book-news-cover,.book-news-cover img{width:98px}
+.book-news-cover img{height:142px}
+.book-news-kicker{font-size:10px;line-height:1.65}
+.book-news-kicker span{display:block;margin-left:0}
+.book-news-title{font-size:21px;line-height:1.25}
+.book-news-meta{font-size:12.5px;line-height:1.55}
+.book-news-cta{font-size:12px}
+}
+@media(max-width:365px){
+.book-news .book-news-card{grid-template-columns:82px minmax(0,1fr);gap:12px;padding:16px}
+.book-news-cover,.book-news-cover img{width:82px}
+.book-news-cover img{height:119px}
+.book-news-title{font-size:19px}
+}
 </style><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="Paolo Buonanno | Professor of Economics" property="og:title"/><meta content="Professor of Economics · Director, Department of Economics · University of Bergamo." property="og:description"/><meta content="website" property="og:type"/></head>
 <body><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
@@ -353,7 +381,16 @@ body{font-kerning:normal}
 </div>
 <div aria-label="Research areas" class="focus-bar"><span class="focus-label">Research areas</span><span class="focus-tag">Political economy</span><span class="focus-dot">◆</span><span class="focus-tag">Economics of crime</span><span class="focus-dot">◆</span><span class="focus-tag">Economic history</span><span class="focus-dot">◆</span><span class="focus-tag">Law &amp; economics</span></div>
 </section>
-<section class="book-news container" aria-label="New publication"><div class="book-news-card"><div class="book-news-kicker">New publication<br>2026 · EGEA</div><div><h2 class="book-news-title">Crescita istituzioni e sviluppo economico</h2><p class="book-news-meta">Paolo Buonanno, Giampaolo Lecce and Laura Ogliari · EGEA, 2026</p></div><a class="book-news-cta" href="https://www.egeaeditore.it/ita/prodotti/economia/crescita-istituzioni-e-sviluppo-economico.aspx" target="_blank" rel="noopener noreferrer">Discover the book ↗</a></div></section>
+<section class="book-news container" aria-label="New publication">
+<div class="book-news-card" id="book-news-card">
+<a class="book-news-cover" href="https://www.egeaeditore.it/ita/prodotti/economia/crescita-istituzioni-e-sviluppo-economico.aspx" target="_blank" rel="noopener noreferrer" aria-label="Book cover: Crescita istituzioni e sviluppo economico">
+<img id="egea-book-cover" src="https://covers.openlibrary.org/b/isbn/9788823824225-L.jpg?default=false" alt="Copertina di Crescita istituzioni e sviluppo economico (EGEA, 2026)" width="126" height="180" loading="lazy" decoding="async">
+</a>
+<div class="book-news-details"><div class="book-news-kicker">New publication <span>2026 · EGEA</span></div>
+<h2 class="book-news-title">Crescita istituzioni e sviluppo economico</h2>
+<p class="book-news-meta">Paolo Buonanno, Giampaolo Lecce and Laura Ogliari · EGEA, 2026</p>
+<a class="book-news-cta" href="https://www.egeaeditore.it/ita/prodotti/economia/crescita-istituzioni-e-sviluppo-economico.aspx" target="_blank" rel="noopener noreferrer">Discover the book ↗</a></div>
+</div></section>
 <section aria-labelledby="research-heading" class="section container" id="research">
 <div class="section-heading"><div><p class="section-kicker">01 / Research</p><h2 id="research-heading">Selected work<span class="period">.</span></h2></div><p class="section-lead">A selection of peer-reviewed articles published in leading international journals. The full research archive includes all publications and working papers.</p></div>
 <div class="paper-list" id="paper-list"><article class="paper" data-type="journal"><div class="paper-date">2024<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1016/j.jpubeco.2024.105257" rel="noopener noreferrer" target="_blank">All Is Not Lost: Organized Crime and Social Capital Formation</a></h3><p class="paper-authors">With Irene Ferrari and Alessandro Saia</p><p class="paper-venue">Journal of Public Economics <span class="oa-badge">Open access</span></p></div><a class="paper-link" href="https://doi.org/10.1016/j.jpubeco.2024.105257" rel="noopener noreferrer" target="_blank">DOI ↗</a></article><article class="paper" data-type="journal"><div class="paper-date">2023<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1016/j.jdeveco.2023.103140" rel="noopener noreferrer" target="_blank">Fighting Violence Against Women: The Role of Female Political Representation</a></h3><p class="paper-authors">With Alena Bochenkova and Sergio Galletta</p><p class="paper-venue">Journal of Development Economics <span class="oa-badge">Open access</span></p></div><a class="paper-link" href="https://doi.org/10.1016/j.jdeveco.2023.103140" rel="noopener noreferrer" target="_blank">DOI ↗</a></article><article class="paper" data-type="journal"><div class="paper-date">2022<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1007/s10887-022-09209-1" rel="noopener noreferrer" target="_blank">Historical Social Contracts and Their Legacy: A Disaggregated Analysis of the Medieval Republics</a></h3><p class="paper-authors">With Matteo Cervellati, Sara Lazzaroni and Giovanni Prarolo</p><p class="paper-venue">Journal of Economic Growth <span class="oa-badge">Open access</span></p></div><a class="paper-link" href="https://doi.org/10.1007/s10887-022-09209-1" rel="noopener noreferrer" target="_blank">DOI ↗</a></article><article class="paper" data-type="journal"><div class="paper-date">2015<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1111/ecoj.12236" rel="noopener noreferrer" target="_blank">Poor Institutions, Rich Mines: Resource Curse and the Origins of the Sicilian Mafia</a></h3><p class="paper-authors">With Ruben Durante, Giovanni Prarolo and Paolo Vanin</p><p class="paper-venue">The Economic Journal </p></div><a class="paper-link" href="https://doi.org/10.1111/ecoj.12236" rel="noopener noreferrer" target="_blank">DOI ↗</a></article><article class="paper" data-type="journal"><div class="paper-date">2013<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1257/aer.103.6.2437" rel="noopener noreferrer" target="_blank">Incarceration and Incapacitation: Evidence from the 2006 Italian Collective Pardon</a></h3><p class="paper-authors">With Steven Raphael</p><p class="paper-venue">American Economic Review </p></div><a class="paper-link" href="https://doi.org/10.1257/aer.103.6.2437" rel="noopener noreferrer" target="_blank">DOI ↗</a></article><article class="paper" data-type="journal"><div class="paper-date">2012<span>Journal article</span></div><div><h3><a href="https://doi.org/10.1111/j.1542-4774.2012.01085.x" rel="noopener noreferrer" target="_blank">Do Immigrants Cause Crime?</a></h3><p class="paper-authors">With Milo Bianchi and Paolo Pinotti</p><p class="paper-venue">Journal of the European Economic Association </p></div><a class="paper-link" href="https://doi.org/10.1111/j.1542-4774.2012.01085.x" rel="noopener noreferrer" target="_blank">DOI ↗</a></article></div>
@@ -363,5 +400,23 @@ body{font-kerning:normal}
 <section aria-labelledby="about-heading" class="about container" id="about"><div class="about-layout"><div><p class="section-kicker">03 / Profile</p><h2 id="about-heading">About<span class="period">.</span></h2></div><div><p>I am Professor of Economics and Director of the Department of Economics at the University of Bergamo. My research focuses on questions in the economics of crime, political economy, law and economics, social interactions and applied economic history, primarily using applied microeconometric methods.</p><p>I previously served as Vice-Rector for Scientific Research and Institutional Communication and as Director of Undergraduate Studies in Economics. This website collects my publications, ongoing research and current teaching activities.</p><div class="about-meta"><div><strong>Affiliation</strong><a href="https://dse.unibg.it/" rel="noopener noreferrer" target="_blank">Department of Economics<br/>University of Bergamo ↗</a></div><div><strong>Academic profiles</strong><a href="https://scholar.google.it/citations?hl=it&amp;user=VG374doAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a><br/><a href="https://orcid.org/0000-0001-8838-3904" rel="noopener noreferrer" target="_blank">ORCID ↗</a></div></div></div></div></section>
 </main>
 <footer class="footer" id="contact"><div class="container"><div class="footer-top"><div><p class="section-kicker">04 / Contact</p><h2>Get in touch.</h2><p>Department of Economics<br/>University of Bergamo<br/>Via dei Caniana 2, 24127 Bergamo, Italy</p></div><a class="footer-email" href="mailto:paolo.buonanno@unibg.it">paolo.buonanno@unibg.it ↗</a></div><div class="footer-bottom"><span>© 2026 Paolo Buonanno</span><div class="footer-links"><a href="https://scholar.google.it/citations?hl=it&amp;user=VG374doAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a><a href="https://ideas.repec.org/e/pbu102.html" rel="noopener noreferrer" target="_blank">RePEc</a><a href="https://orcid.org/0000-0001-8838-3904" rel="noopener noreferrer" target="_blank">ORCID</a><a href="#main-content">Back to top ↑</a></div></div></div></footer>
-<script>(function(){const b=document.getElementById('menuButton'),n=document.getElementById('main-nav');if(b&&n){b.addEventListener('click',()=>{const v=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(v));n.dataset.open=String(v);b.textContent=v?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');n.dataset.open='false';b.textContent='☰'}));}})();</script></body>
+<script>(function(){const b=document.getElementById('menuButton'),n=document.getElementById('main-nav');if(b&&n){b.addEventListener('click',()=>{const v=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(v));n.dataset.open=String(v);b.textContent=v?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');n.dataset.open='false';b.textContent='☰'}));}})();</script><script>
+(function(){
+  const cover=document.getElementById('egea-book-cover');
+  const card=document.getElementById('book-news-card');
+  if(!cover||!card)return;
+  const urls=[
+    'https://covers.openlibrary.org/b/isbn/9788823824225-L.jpg?default=false',
+    'https://www.ibs.it/images/9788823824225_0_0_300_80.jpg',
+    'https://books.google.com/books/content?vid=ISBN9788823824225&printsec=frontcover&img=1&zoom=1'
+  ];
+  let i=0;
+  function next(){
+    i++;
+    if(i<urls.length){cover.src=urls[i];}else{card.classList.add('no-cover');}
+  }
+  cover.addEventListener('error',next);
+  cover.addEventListener('load',function(){if(cover.naturalWidth<10||cover.naturalHeight<10)next();});
+})();
+</script></body>
 </html>
