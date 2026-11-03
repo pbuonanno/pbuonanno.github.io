@@ -1,0 +1,92 @@
+/* Shared navigation for Home, Research and Media. */
+.site-navigation[data-open] {
+  display: flex;
+  position: static;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--muted, #58627b);
+}
+.site-navigation a {
+  white-space: nowrap;
+  transition: color .2s;
+}
+.site-navigation a:hover,
+.site-navigation a[aria-current="page"] {
+  color: #4355ed;
+}
+.site-navigation .nav-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule, var(--line, #dfe4ee));
+  border-radius: 5px;
+  background: var(--surface, #fff);
+  color: var(--ink, #18213a);
+  font-weight: 700;
+}
+.site-navigation .nav-cv:hover {
+  border-color: #4355ed;
+  color: #4355ed;
+}
+.site-menu-toggle {
+  display: none;
+  flex: 0 0 auto;
+  width: 43px;
+  height: 41px;
+  padding: 0;
+  border: 1px solid var(--rule, var(--line, #dfe4ee));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink, #18213a);
+  font: 22px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+.site-menu-toggle:focus-visible,
+.site-navigation a:focus-visible {
+  outline: 3px solid #4355ed;
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .site-menu-toggle {
+    display: block;
+  }
+  .site-navigation[data-open] {
+    display: none;
+    position: absolute;
+    inset: 100% 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 16px 23px;
+    border-bottom: 1px solid var(--rule, var(--line, #dfe4ee));
+    background: var(--paper, var(--bg, #f8f9fe));
+    box-shadow: 0 18px 26px #15203716;
+  }
+  .site-navigation[data-open="true"] {
+    display: flex;
+  }
+  .site-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+  .site-navigation .nav-cv {
+    align-self: flex-start;
+    padding: 10px 14px;
+  }
+}
